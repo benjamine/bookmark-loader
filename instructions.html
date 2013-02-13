@@ -1,0 +1,34 @@
+<html>
+<head>
+	<title>Bookmarklet-Loader Instructions</title>
+</head>
+<body>
+
+<h1>Bookmarklet-Loader Instructions</h1>
+
+<p>
+	<ul>
+		<li>Drag this <a class="bookmarklet" href="javascript:var s=document.createElement('script');s.setAttribute('id','bookmark-loader');s.setAttribute('src','https://rawgithub.com/benjamine/bookmark-loader/master/bookmark-loader.js');s.setAttribute('data-bookmarks','https://rawgithub.com/benjamine/bookmark-loader/master/bookmarks/example.md');document.body.appendChild(s);">bookmarklet</a> to your browser bookmarks toolbar</li>
+		<li>Edit the bookmarklet url replacing the .md url with your own bookmarks file (in markdown format)</li>
+		<li>Click your bookmarklet on any page!</li>
+	</ul>
+</p>
+
+<p>
+	Note: some sites like github.com block bookmarklets, so you'll just see a warning on the console on those.
+</p>
+
+<h2>Bookmarks file</h2>
+
+<p>
+	To use your own bookmarks file it has to be available at a domain that supports CORS.
+	You can host it on github and access it using [github pages](http://pages.github.com/).
+</p><p>
+	The bookmarks file is markdown document containing a list of links.
+	Each list items can contain text (useful to group links), or an hyperlink.
+</p><p>
+	<a href="/bookmarks/example.md">Example</a>
+</p>
+
+</body>
+</html>
