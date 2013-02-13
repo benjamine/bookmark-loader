@@ -1,6 +1,16 @@
-(function(url) {
+(function() {
 	var tiny_ajax = function(m,u,c,d){with(new(this.XMLHttpRequest||ActiveXObject)("Microsoft.XMLHTTP"))onreadystatechange=function(){readyState^4||c(this)},open(m,u),send(d)};
 	var match;
+	var script = document.getElementById('bookmark-loader');
+	var url = script.getAttribute('data-bookmarks');
+	window.__removeById = function(){
+		for (var i = 0; i < arguments.length; i++) {
+			var elem = document.getElementById(arguments[i]);
+			if (elem) {
+				elem.parentNode.removeChild(elem);
+			}
+		}
+	};
 	tiny_ajax('GET', url, function(req) {
 		var markdown = req.responseText;
 		markdown = markdown.split('\n');
@@ -8,7 +18,7 @@
 		var currentList = links;
 		currentList.indent = 0;
 		var html = [];
-		html.push('<a class="remove" href="javascript:document.getElementById(\'injected-bookmarks\').parentNode.removeChild(document.getElementById(\'injected-bookmarks\'));">close</a>');
+		html.push('<a class="remove" href="javascript:window.__removeById(\'injected-bookmarks\',\'bookmark-loader\');">close</a>');
 		for (var i=0; i<markdown.length; i++) {
 			var line = markdown[i];
 			if (match = /^(\s*)\-\s*(.+)\s*$/.exec(line)) {
@@ -59,20 +69,17 @@
 		container.setAttribute('class', 'injected-bookmarks');
 		container.setAttribute('id', 'injected-bookmarks');
 		container.innerHTML = html.join('');
-		var previousContainer = document.getElementById('injected-bookmarks');
-		if (previousContainer) {
-			previousContainer.parentNode.removeChild(previousContainer);
-		}
+		window.__removeById('injected-bookmarks');
 		document.body.appendChild(container);
+		setTimeout(function()) {
+			window.__removeById('bookmark-loader');
+		},1);
 	});
 	tiny_ajax('GET', 'https://rawgithub.com/benjamine/bookmark-loader/master/bookmark-loader.css', function(req) {
 		var container = document.createElement('style');
 		container.innerHTML = req.responseText;
 		container.setAttribute('id', 'injected-bookmarks-style');
-		var previousContainer = document.getElementById('injected-bookmarks-style');
-		if (previousContainer) {
-			previousContainer.parentNode.removeChild(previousContainer);
-		}
+		window.__removeById('injected-bookmarks-style');
 		document.body.appendChild(container);
 	});
-})
+})();
