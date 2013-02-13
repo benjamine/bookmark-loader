@@ -65,9 +65,10 @@
 		}
 		document.body.appendChild(container);
 	});
-	tiny_ajax('GET', url.slice(0,-2) + 'css', function(req) {
+	tiny_ajax('GET', 'https://rawgithub.com/benjamine/bookmark-loader/master/bookmark-loader.css', function(req) {
 		var container = document.createElement('style');
 		container.innerHTML = req.responseText;
+		container.setAttribute('id', 'injected-bookmarks-style');
 		var previousContainer = document.getElementById('injected-bookmarks-style');
 		if (previousContainer) {
 			previousContainer.parentNode.removeChild(previousContainer);
