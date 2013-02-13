@@ -72,7 +72,6 @@
 		if (previousContainer) {
 			previousContainer.parentNode.removeChild(previousContainer);
 		}
-		container.appendChild(style);
 		document.body.appendChild(container);
 	});
 })
