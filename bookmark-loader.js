@@ -75,11 +75,13 @@
 			window.__removeById('bookmark-loader');
 		},1);
 	});
-	tiny_ajax('GET', 'http://benjamine.github.com/bookmark-loader/bookmark-loader.css', function(req) {
-		var container = document.createElement('style');
-		container.innerHTML = req.responseText;
-		container.setAttribute('id', 'injected-bookmarks-style');
-		window.__removeById('injected-bookmarks-style');
-		document.body.appendChild(container);
-	});
+
+	window.__removeById('injected-bookmarks-style');
+    var head = document.getElementsByTagName("head")[0] || document.documentElement;
+	var style = document.createElement('link');
+	style.setAttribute('href', 'http://benjamine.github.com/bookmark-loader/bookmark-loader.css');
+	style.setAttribute('rel', 'stylesheet');
+	style.setAttribute('id', 'injected-bookmarks-style');
+	head.appendChild(style);
+
 })();
