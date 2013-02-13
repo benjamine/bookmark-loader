@@ -1,10 +1,15 @@
 <html>
 <head>
 	<title>Bookmarklet-Loader</title>
+    <link rel="stylesheet" href="/style.css" type="text/css" media="screen" />
 </head>
 <body>
 
-<h1>Bookmarklet Loader</h1>
+<a href='https://github.com/benjamine/bookmark-loader' id='fork_me'>
+    <img alt='Fork me on GitHub' src='http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png'>
+</a>
+
+<h1>Bookmarklet-Loader</h1>
 
 <p>Load a menu of bookmarks on your page using a browser bookmarklet. Bookmarklet Inception!</p>
 
@@ -12,7 +17,7 @@
 
 <p>
 	<ul>
-		<li>Drag this bookmarklet: <a class="bookmarklet" href="javascript:var s=document.createElement('script');s.setAttribute('id','bookmark-loader');s.setAttribute('src','https://rawgithub.com/benjamine/bookmark-loader/master/bookmark-loader.js');s.setAttribute('data-bookmarks','https://rawgithub.com/benjamine/bookmark-loader/master/bookmarks/example.md');document.body.appendChild(s);">Bookmarks</a> to your browser bookmarks toolbar</li>
+		<li>Drag this bookmarklet: <a title="Drag me to your bookmarks toolbar!" class="bookmarklet" href="javascript:var s=document.createElement('script');s.setAttribute('id','bookmark-loader');s.setAttribute('src','https://rawgithub.com/benjamine/bookmark-loader/master/bookmark-loader.js');s.setAttribute('data-bookmarks','https://rawgithub.com/benjamine/bookmark-loader/master/bookmarks/example.md');document.body.appendChild(s);">Bookmarks</a> to your browser bookmarks toolbar</li>
 		<li>Edit the bookmarklet url replacing the .md url with your own bookmarks file (you can change the bookmark title accordingly)</li>
 		<li>Start using your bookmarklet!</li>
 	</ul>
@@ -33,6 +38,10 @@
 </p><p>
 	<a href="https://github.com/benjamine/bookmark-loader/blob/master/bookmarks/example.md">Example</a>
 </p>
+
+<footer>
+    <p class="credits">bookmark-loader was developed by <a href="http://twitter.com/beneidel">Benjamín Eidelman</a></p>
+</footer>
 
 </body>
 </html>

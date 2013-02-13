@@ -1,0 +1,46 @@
+body {
+    font-family: Georgia, serif;
+}
+
+h1 {
+    margin: 30px;
+}
+
+a#fork_me {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+footer {
+    font-size: small;
+    text-align: center;
+    margin: 40px;    
+}
+
+.credits {
+    font-size: smaller;
+}
+
+.credits a {
+    text-decoration: none;
+    color: black;
+}
+
+.credits a:hover {
+    text-decoration: underline;
+}
+
+li {
+    margin: 10px;
+}
+
+.bookmarklet {
+    border: 1px solid blue;
+    background: #ddd;
+    padding: 5px;
+}
+
+.bookmarklet:hover {
+    background: #eee;
+}
