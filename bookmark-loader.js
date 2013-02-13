@@ -87,7 +87,7 @@
 			bookmarkLoader.removeElementsById('bookmark-loader-menu');
 			document.body.appendChild(container);
 			setTimeout(function() {
-				window.__removeById('bookmark-loader');
+				bookmarkLoader.removeElementsById('bookmark-loader');
 			},1);
 			bookmarkLoader.currentLinks = links;
 			bookmarkLoader.currentUrl = markdownUrl;
