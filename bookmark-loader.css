@@ -1,4 +1,4 @@
-.bookmarks-loader-menu {
+.bookmark-loader-menu {
 	font: normal 18px arial, sans-serif;
 	color: #888;
 	background: #ff9;
@@ -11,26 +11,26 @@
 	max-height: 90%;
 	overflow: auto;
 }
-.bookmarks-loader-menu a {
+.bookmark-loader-menu a {
 	text-decoration: none;
 	background: transparent;
 	color: black;
 	border: none;
 }
-.bookmarks-loader-menu a:hover {
+.bookmark-loader-menu a:hover {
 	text-decoration: underline;
 	color: #00F;
 }
-.bookmarks-loader-menu a.remove {
+.bookmark-loader-menu a.remove {
 	font-size: 12px;
 	float: right;
 }
-.bookmarks-loader-menu ul {
+.bookmark-loader-menu ul {
 	margin: 0 0 0 15px;
 	padding: 0 0 0 20px;
 	border: none;
 }
-.bookmarks-loader-menu li {
+.bookmark-loader-menu li {
 	margin: 0;
 	padding: 8px 0 0 0;
 	border: none;
