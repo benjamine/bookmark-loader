@@ -65,12 +65,13 @@
 						}
 						html.push('</li><li>');
 					}
-					if (match = /\[(.+)\]\((.+)\)/.exec(itemText)) {
+					if (match = /^\s*\[(.+)\]\((.+)\)\s*(\S.*\S)?\s*$/.exec(itemText)) {
 						currentList.push({
 							title: match[1],
-							url: match[2]
+							url: match[2],
+							description: match[3]
 						});
-						html.push('<a href="', match[2], '">', match[1], '</a>');
+						html.push('<a title="', match[3] || match[1], '" href="', match[2], '">', match[1], '</a>');
 					} else {
 						currentList.push({
 							title: itemText

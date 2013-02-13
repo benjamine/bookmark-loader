@@ -1,7 +1,8 @@
 .bookmark-loader-menu {
 	font: normal 18px arial, sans-serif;
+	white-space: nowrap;
 	color: #888;
-	background: #ff9;
+	background: rgba(255,255,150,0.7);
 	border: none;
 	position: fixed;
 	top: 0;
@@ -10,6 +11,7 @@
 	padding: 20px;
 	max-height: 90%;
 	overflow: auto;
+	border-radius: 0 0 8px 0;
 }
 .bookmark-loader-menu a {
 	text-decoration: none;
@@ -24,6 +26,9 @@
 .bookmark-loader-menu a.remove {
 	font-size: 12px;
 	float: right;
+	position: relative;
+	top: -10px;
+	left: 8px;
 }
 .bookmark-loader-menu ul {
 	margin: 0 0 0 15px;
