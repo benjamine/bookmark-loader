@@ -75,7 +75,7 @@
 			window.__removeById('bookmark-loader');
 		},1);
 	});
-	tiny_ajax('GET', 'https://rawgithub.com/benjamine/bookmark-loader/master/bookmark-loader.css', function(req) {
+	tiny_ajax('GET', 'http://benjamine.github.com/bookmark-loader/bookmark-loader.css', function(req) {
 		var container = document.createElement('style');
 		container.innerHTML = req.responseText;
 		container.setAttribute('id', 'injected-bookmarks-style');
