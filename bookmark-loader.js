@@ -71,7 +71,7 @@
 		container.innerHTML = html.join('');
 		window.__removeById('injected-bookmarks');
 		document.body.appendChild(container);
-		setTimeout(function()) {
+		setTimeout(function() {
 			window.__removeById('bookmark-loader');
 		},1);
 	});
