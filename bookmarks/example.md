@@ -1,8 +1,6 @@
 # Bookmarks
 
-- search engines
-    - [google](http://www.google.com)
-    - [bing](http://www.bing.com)
+- [search engines](javascript:bookmarkLoader.load('~/searchengines.md');)
 - dev tools
     - [bookmark-loader](https://github.com/benjamine/bookmark-loader)
     - [Dom Moster!](javascript:(function(){var script=document.createElement('script');script.src='http://mir.aculo.us/dom-monster/dommonster.js?'+Math.floor((+new Date)/(864e5));document.body.appendChild(script);})())
